@@ -1,7 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
-const port = process.env.PORT || 3000
 
 app.use(bodyParser.json())
 
@@ -12,7 +11,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/api', function(req, res) {
+app.get('/', function(req, res) {
   console.log(req.query.textQuery)
   console.log('back ok')
   res.send({
@@ -36,6 +35,7 @@ app.get('/api', function(req, res) {
 
 })
 
+const port = process.env.PORT || 3000
 app.listen(port, () => {
   console.log(`listening on *:${port}`);
 })
