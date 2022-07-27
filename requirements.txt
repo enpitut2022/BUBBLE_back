@@ -1,2 +1,2 @@
-mecab-python3
-unidic-lite
+mecab-python3==0.996
+ipadic==1.0.0
