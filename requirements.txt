@@ -1,7 +1,2 @@
-<<<<<<< HEAD
 mecab-python3==0.996
 ipadic==1.0.0
-=======
-mecab-python3
-unidic-lite
->>>>>>> eda6e7682bb129aaeeae251310501a60207a3c51
