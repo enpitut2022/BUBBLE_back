@@ -12,7 +12,7 @@ app.get('/', function(req, res) {
   console.log('back ok')
 
   var {PythonShell} = require('python-shell');
-  var pyshell = new PythonShell('./backend_py/main.py');  
+  var pyshell = new PythonShell('./backend_py/make_cloud.py');  
   console.log("req")
   console.log(req.query.textQuery) //フロントエンドから受け取ったデータをconsole.logしている。
 

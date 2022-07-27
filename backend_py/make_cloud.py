@@ -8,7 +8,7 @@ import MeCab
 from wordcloud import WordCloud
 import json
 
-df = pd.read_csv("./sample_data.csv")
+df = pd.read_csv("./backend_py/sample_data.csv")
 df.text = df.text.str.normalize("NFKC").str.lower()
 df.text = df.text.str.replace("\n", " ")
 df.text = df.text.str.replace("\u2028", "")
