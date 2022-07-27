@@ -10,9 +10,6 @@ app.use(cors())
 app.get('/', function(req, res) {
   console.log(req.query.textQuery)
   console.log('back ok')
-  res.send({
-    wordCloud: '雨のちドラゴン'   //pythonで実施した演算結果をフロントエンドに返している。
-  })
 
   var {PythonShell} = require('python-shell');
   var pyshell = new PythonShell('./backend_py/main.py');  
