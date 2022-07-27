@@ -16,10 +16,10 @@ app.get('/', function(req, res) {
   console.log("req")
   console.log(req.query.textQuery) //フロントエンドから受け取ったデータをconsole.logしている。
 
-  pyshell.send(req.query.textQuery); //本コードからpythonコードに'req.query.textQuery'を入力データとして提供する 
+  // pyshell.send(req.query.textQuery); //本コードからpythonコードに'req.query.textQuery'を入力データとして提供する 
 
   //pythonコード実施後にpythonから本コードにデータが引き渡される。
-  pyshell.on('textQuery',  function (textQuery) {
+  pyshell.on('message',  function (textQuery) {
     console.log("return data")
     res.send({
       message: data   //pythonで実施した演算結果をフロントエンドに返している。
